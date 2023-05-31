@@ -22,11 +22,10 @@ const CodeLanguageStats = async () => {
   const filteredData = data.filter((item) =>
     ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
   );
-  console.log(data);
   return (
     <>
       <div className="text-center">
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
         How was Showwand created?
         </h1>
       </div>
