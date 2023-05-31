@@ -30,7 +30,7 @@ const CodeLanguageStats = async () => {
           How Showwand Made?
         </h1>
       </div>
-      <div className="flex items-center justify-around space-x-4">
+      <div className="overflow-hidden text-center">
         {filteredData.map((item, index) => {
           let IconComponent;
           switch (item.language) {
@@ -49,24 +49,24 @@ const CodeLanguageStats = async () => {
           }
 
           return (
-            <div key={index} className="grid grid-cols-1 grid-rows-2">
-              <div className="">
-                <IconComponent size={58} />
-                <p className="text-3xl text-black">{item.language}</p>
+            <div key={index} className="block sm:inline-block sm:float-none bg-slate-100 mb-9 sm:mb-7 py-9 px-10 sm:px-12 mx-4 rounded-md">
+              <div className="text-center">
+                <IconComponent size={50} className="inline mb-3" />
+                <p className="text-3xl font-semibold text-black">{item.language}</p>
               </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                <p className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 group hover:text-black hover:bg-gray-200">
+              <div className="flex justify-center items-center px-3">
+                <div className="flex items-center py-5 px-8">
                   <span className="mr-1">
                     <FaFolder />
                   </span>
                   {item.files}
-                </p>
-                <p className="text-base text-black">
+                </div>
+                <div className="flex items-center text-base text-black">
                   <span className="mr-1">
                     <FaCode />
                   </span>
                   {item.linesOfCode}
-                </p>
+                </div>
               </div>
             </div>
           );
