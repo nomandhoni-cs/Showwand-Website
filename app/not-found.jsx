@@ -22,7 +22,6 @@ export default function NotFound() {
             <Link
               href="/"
               className="rounded-md bg-slate-950 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
-              target="_blank"
             >
               Go Back Home
             </Link>

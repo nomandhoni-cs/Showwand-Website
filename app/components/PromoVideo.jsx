@@ -6,11 +6,20 @@ const PromoVideo = () => {
   return (
     <div className="lg:flex lg:flex-row items-center lg:mb-14">
       <div className="iframe-promo lg:h-96 w-full lg:w-full lg:px-10 px-0 mb-3 lg:mb-0">
-        <iframe
+        {/* <iframe
           className="w-full lg:h-full sm:h-96 h-56 rounded-lg shadow-lg"
           src={`https://www.youtube.com/embed/${videoId}`}
           title="Promo Video"
           allowFullScreen
+        ></iframe> */}
+        <iframe
+          className="w-full lg:h-full sm:h-96 h-56 rounded-lg shadow-lg"
+          src={`https://www.youtube.com/embed/${videoId}&autoplay=1`}
+          srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/jDIs7GivgGc?autoplay=1><img src=https://img.youtube.com/vi/jDIs7GivgGc/hqdefault.jpg alt='Showwand Unleash Your Thread Wizardry'><span>▶</span></a>"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Showwand Unleash Your Thread Wizardry"
         ></iframe>
       </div>
       <div className="iframe-info h-80 lg:w-3/5">
