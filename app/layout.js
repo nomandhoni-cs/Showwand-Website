@@ -6,8 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Showwand - Unleash Your Thread Wizardry",
-  description:
-    "Your Companion for Effortless Posting and Thread Management.",
+  description: "Your Companion for Effortless Posting and Thread Management.",
 };
 
 export default function RootLayout({ children }) {

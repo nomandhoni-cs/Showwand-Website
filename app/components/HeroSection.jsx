@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { HiDownload } from "react-icons/hi";
 export default function HeroSection() {
   return (
     <div className="bg-white">
@@ -21,15 +23,19 @@ export default function HeroSection() {
               Showwand - Unleash Your Thread Wizardry
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-            Your Companion for Effortless Posting and Thread Management
+              Your Companion for Effortless Posting and Thread Management
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              <Link
+                href="https://github.com/nomandhoni-cs/Showwand/releases"
+                className="rounded-md bg-slate-950 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
+                target="_blank"
               >
-                Get started
-              </a>
+                Download
+                <span aria-hidden="true" className="inline-block ms-2">
+                  <HiDownload />
+                </span>
+              </Link>
               <a
                 href="#"
                 className="text-sm font-semibold leading-6 text-gray-900"

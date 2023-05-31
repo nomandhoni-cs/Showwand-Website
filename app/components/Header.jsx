@@ -1,7 +1,7 @@
 "use client";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-
+import logo from "../../public/logo.png";
 import {
   HiOutlineX,
   HiArrowNarrowRight,
@@ -14,6 +14,7 @@ import {
 } from "react-icons/hi";
 import { GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
+import Image from "next/image";
 const products = [
   {
     name: "Analytics",
@@ -52,14 +53,15 @@ const Header = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img
+          <a href="#" className="-m-1.5 p-1.5 flex items-center">
+            <span className="sr-only">Showwand</span>
+            {/* <img
               className="h-8 w-auto"
-              src="https://raw.githubusercontent.com/nomandhoni-cs/Showwand/master/assets/icon128.png"
+              src="https://cdn-icons-png.flaticon.com/512/3670/3670016.png"
               alt=""
-            />
-            {/* <Image src="https://raw.githubusercontent.com/nomandhoni-cs/Showwand/master/assets/icon128.png" className="h-8 w-auto" alt="Logo - Of Showwand" width={100} height={100} /> */}
+            /> */}
+            <Image src={logo} className="h-8 w-auto rounded-md bg-slate-950 px-0.3 py-0.1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600" alt="Logo - Of Showwand" width={100} height={100} />
+            <span className="text-xl mx-2 font-bold tracking-tight text-gray-900 sm:text-3xl">Showwand</span>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -161,12 +163,12 @@ const Header = () => {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              {/* <img
+              <span className="sr-only">Showwand</span>
+              <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://raw.githubusercontent.com/nomandhoni-cs/Showwand/master/assets/icon128.png"
                 alt=""
-              /> */}
+              />
             </a>
             <button
               type="button"
