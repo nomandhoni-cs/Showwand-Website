@@ -6,13 +6,13 @@ import {
   HiOutlineX,
   HiArrowNarrowRight,
   HiChevronDown,
-  HiPhone,
   HiPlay,
   HiMenu,
   HiChartPie,
   HiCursorClick,
 } from "react-icons/hi";
 import { GoMarkGithub } from "react-icons/go";
+import { FaHandsHelping } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 const products = [
@@ -36,8 +36,16 @@ const products = [
   },
 ];
 const callsToAction = [
-  { name: "Watch demo", href: "#", icon: HiPlay },
-  { name: "Contact sales", href: "#", icon: HiPhone },
+  {
+    name: "Watch Promo",
+    href: "https://www.youtube.com/watch?v=jDIs7GivgGc",
+    icon: HiPlay,
+  },
+  {
+    name: "Contribute",
+    href: "https://github.com/nomandhoni-cs/Showwand",
+    icon: FaHandsHelping,
+  },
 ];
 
 function classNames(...classes) {
@@ -53,16 +61,19 @@ const Header = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5 flex items-center">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center">
             <span className="sr-only">Showwand</span>
-            {/* <img
-              className="h-8 w-auto"
-              src="https://cdn-icons-png.flaticon.com/512/3670/3670016.png"
-              alt=""
-            /> */}
-            <Image src={logo} className="h-8 w-auto rounded-md bg-slate-950 px-0.3 py-0.1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600" alt="Logo - Of Showwand" width={100} height={100} />
-            <span className="text-xl mx-2 font-bold tracking-tight text-gray-900 sm:text-3xl">Showwand</span>
-          </a>
+            <Image
+              src={logo}
+              className="h-8 w-auto rounded-md bg-slate-950 px-0.3 py-0.1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
+              alt="Logo - Of Showwand"
+              width={100}
+              height={100}
+            />
+            <span className="text-xl mx-2 font-bold tracking-tight text-gray-900 sm:text-3xl">
+              Showwand
+            </span>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -98,11 +109,11 @@ const Header = () => {
                   {products.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-200"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                         <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                          className="h-6 w-6 text-gray-600 group-hover:text-slate-950"
                           aria-hidden="true"
                         />
                       </div>
@@ -124,10 +135,10 @@ const Header = () => {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 group hover:text-black hover:bg-gray-200"
                     >
                       <item.icon
-                        className="h-5 w-5 flex-none text-gray-400"
+                        className="h-5 w-5 flex-none text-gray-400 group-hover:text-slate-950 "
                         aria-hidden="true"
                       />
                       {item.name}
@@ -138,18 +149,35 @@ const Header = () => {
             </Transition>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            href="/features"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Features
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Company
-          </a>
+          </Link>
+          <Link
+            href="/"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Docs
+          </Link>
+          <Link
+            href="#"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            About
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="https://github.com/nomandhoni-cs/Showwand" className="text-sm font-semibold leading-6 text-gray-900" target="_blank">GitHub<span aria-hidden="true" className="inline-block mx-2"><GoMarkGithub  /></span>
+          <Link
+            href="https://github.com/nomandhoni-cs/Showwand"
+            className="text-sm font-semibold leading-6 text-gray-900"
+            target="_blank"
+          >
+            GitHub
+            <span aria-hidden="true" className="inline-block mx-2">
+              <GoMarkGithub />
+            </span>
           </Link>
         </div>
       </nav>
@@ -162,14 +190,19 @@ const Header = () => {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5 flex items-center">
               <span className="sr-only">Showwand</span>
-              <img
-                className="h-8 w-auto"
-                src="https://raw.githubusercontent.com/nomandhoni-cs/Showwand/master/assets/icon128.png"
-                alt=""
+              <Image
+                src={logo}
+                className="h-8 w-auto rounded-md bg-slate-950 px-0.3 py-0.1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
+                alt="Logo - Of Showwand"
+                width={100}
+                height={100}
               />
-            </a>
+              <span className="text-xl mx-2 font-bold tracking-tight text-gray-900 sm:text-3xl">
+                Showwand
+              </span>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
