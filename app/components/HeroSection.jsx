@@ -32,7 +32,7 @@ export default function HeroSection() {
                 href="/docs"
                 className="rounded-md px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-black shadow-sm hover:bg-slate-950 hover:text-white hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
               >
-                Documentation <span aria-hidden="true">→</span>
+                Instruction <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>

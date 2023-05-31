@@ -2,6 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../../public/logo.png";
+const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/nomandhoni.fan",
+    icon: FaFacebook,
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com/nomandhoni",
+    icon: FaTwitter,
+  },
+  {
+    name: "Github",
+    href: "https://github.com/nomandhoni-cs",
+    icon: FaGithub,
+  },
+];
 const Footer = () => {
   return (
     <>
@@ -9,115 +26,104 @@ const Footer = () => {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-            <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-              <span className="sr-only">Showwand</span>
-              <Image
-                src={logo}
-                className="h-8 w-auto rounded-md bg-slate-950 px-0.3 py-0.1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
-                alt="Logo - Of Showwand"
-                width={100}
-                height={100}
-              />
-              <span className="text-xl mx-2 font-bold tracking-tight text-gray-900 sm:text-3xl">
-                Showwand
-              </span>
-            </Link>
+              <Link href="/" className="-m-1.5 p-1.5 flex items-center">
+                <span className="sr-only">Showwand</span>
+                <Image
+                  src={logo}
+                  className="h-8 w-auto rounded-md bg-slate-950 px-0.3 py-0.1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
+                  alt="Logo - Of Showwand"
+                  width={100}
+                  height={100}
+                />
+                <span className="text-xl mx-2 font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  Showwand
+                </span>
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-bold text-slate-950 uppercase">
                   Resources
                 </h2>
-                <ul className="text-gray-600 dark:text-gray-400 font-medium">
+                <ul className="text-gray-800 font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
-                      Flowbite
-                    </a>
+                    <Link href="https://showwand.vercel.com/" className="hover:underline">
+                      Showwand
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://tailwindcss.com/"
+                    <Link
+                      href="https://github.com/nomandhoni-cs/Showwand"
                       className="hover:underline"
                     >
-                      Tailwind CSS
-                    </a>
+                      Contribute
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-bold text-slate-950 uppercase">
                   Follow us
                 </h2>
-                <ul className="text-gray-600 dark:text-gray-400 font-medium">
+                <ul className="text-gray-800 font-medium">
                   <li className="mb-4">
-                    <a
-                      href="https://github.com/themesberg/flowbite"
+                    <Link
+                      href="https://github.com/nomandhoni-cs/Showwand"
                       className="hover:underline "
                     >
                       Github
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="https://discord.gg/4eeurUVvTy"
                       className="hover:underline"
                     >
                       Discord
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-bold text-slate-950 uppercase">
                   Legal
                 </h2>
-                <ul className="text-gray-600 dark:text-gray-400 font-medium">
+                <ul className="text-gray-800 font-medium">
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <Link href="/privacy" className="hover:underline">
                       Privacy Policy
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <Link href="/terms" className="hover:underline">
                       Terms &amp; Conditions
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            <span className="text-sm text-gray-900 sm:text-center">
               © 2023{" "}
-              <a href="https://flowbite.com/" className="hover:underline">
+              <Link href="/" className="hover:underline">
                 Showwand™
-              </a>
+              </Link>
               . All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-              >
-                <FaFacebook />
-                <span className="sr-only">Facebook page</span>
-              </Link>
-
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-              >
-                <FaTwitter />
-                <span className="sr-only">Twitter page</span>
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
-              >
-                <FaGithub />
-                <span className="sr-only">GitHub account</span>
-              </Link>
+              {socialLinks.map((socialLink) => (
+                <Link
+                  href={socialLink.href}
+                  className=" text-gray-800 hover:text-slate-950"
+                  target={"_blank"}
+                  key={socialLink.name}
+                >
+                  <socialLink.icon />
+                  <span className="sr-only">{socialLink.name}</span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
