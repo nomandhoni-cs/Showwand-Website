@@ -27,7 +27,7 @@ const CodeLanguageStats = async () => {
     <>
       <div className="text-center">
         <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
-          How Showwand Made?
+        How was Showwand created?
         </h1>
       </div>
       <div className="flex items-center justify-around space-x-4">
