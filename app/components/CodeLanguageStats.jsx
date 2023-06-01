@@ -22,12 +22,11 @@ const CodeLanguageStats = async () => {
   const filteredData = data.filter((item) =>
     ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
   );
-  console.log(data);
   return (
     <>
       <div className="text-center">
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
-          How Showwand Made?
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
+        How was Showwand created?
         </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center">
