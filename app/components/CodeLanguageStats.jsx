@@ -49,13 +49,13 @@ const CodeLanguageStats = async () => {
           }
 
           return (
-            <div key={index} className=" bg-slate-100 mb-9 sm:mb-7 py-9 px-10 sm:px-12 mx-4 rounded-md">
+            <div key={index} className="relative group bg-white shadow-lg hover:shadow-2xl mb-9 sm:mb-7 py-9 px-12 sm:px-14 mx-4 rounded-md">
               <div className="text-center mb-6">
-                <IconComponent size={50} className="inline mb-3" />
+                <IconComponent size={50} className="inline mb-3  group-hover:scale-125 transition duration-300 ease-out hover:ease-in" />
                 <p className="text-3xl font-semibold text-black">{item.language}</p>
               </div>
               <div className="flex justify-around items-center">
-                <div className="flex items-center relative after:content-[''] after:absolute after:w-[2px] after:h-6 after:bg-slate-300 after:right-[-27px]">
+                <div className="flex items-center after:content-[''] after:absolute after:w-[2px] after:h-6 after:bg-slate-300 after:right-[50%] after:bottom-[17%]">
                   <span className="mr-1">
                     <FaFolder />
                   </span>
