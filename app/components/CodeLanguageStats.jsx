@@ -22,15 +22,14 @@ const CodeLanguageStats = async () => {
   const filteredData = data.filter((item) =>
     ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
   );
-  console.log(data);
   return (
     <>
       <div className="text-center">
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
-          How Showwand Made?
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
+        How was Showwand created?
         </h1>
       </div>
-      <div className="flex items-center justify-around space-x-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center">
         {filteredData.map((item, index) => {
           let IconComponent;
           switch (item.language) {
@@ -49,24 +48,24 @@ const CodeLanguageStats = async () => {
           }
 
           return (
-            <div key={index} className="grid grid-cols-1 grid-rows-2">
-              <div className="">
-                <IconComponent size={58} />
-                <p className="text-3xl text-black">{item.language}</p>
+            <div key={index} className="relative group bg-white shadow-lg hover:shadow-2xl mb-9 sm:mb-7 py-9 px-12 sm:px-14 mx-4 rounded-md">
+              <div className="text-center mb-6">
+                <IconComponent size={50} className="inline mb-3  group-hover:scale-125 transition duration-300 ease-out hover:ease-in" />
+                <p className="text-3xl font-semibold text-black">{item.language}</p>
               </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                <p className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 group hover:text-black hover:bg-gray-200">
+              <div className="flex justify-around items-center">
+                <div className="flex items-center after:content-[''] after:absolute after:w-[2px] after:h-6 after:bg-slate-300 after:right-[50%] after:bottom-[17%]">
                   <span className="mr-1">
                     <FaFolder />
                   </span>
                   {item.files}
-                </p>
-                <p className="text-base text-black">
+                </div>
+                <div className="flex items-center text-base text-black">
                   <span className="mr-1">
                     <FaCode />
                   </span>
                   {item.linesOfCode}
-                </p>
+                </div>
               </div>
             </div>
           );
