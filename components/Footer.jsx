@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
-import logo from "../../public/logo.png";
+import logo from "../public/logo.png";
 const socialLinks = [
   {
     name: "Facebook",
@@ -47,13 +47,14 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-800 font-medium">
                   <li className="mb-4">
-                    <Link href="https://showwand.vercel.com/" className="hover:underline">
+                    <Link href="https://showwand.vercel.com/" target={`_blank`} className="hover:underline">
                       Showwand
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="https://github.com/nomandhoni-cs/Showwand"
+                      target={`_blank`}
                       className="hover:underline"
                     >
                       Contribute
@@ -69,6 +70,7 @@ const Footer = () => {
                   <li className="mb-4">
                     <Link
                       href="https://github.com/nomandhoni-cs/Showwand"
+                      target={`_blank`}
                       className="hover:underline "
                     >
                       Github
@@ -77,6 +79,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="https://discord.gg/4eeurUVvTy"
+                      target={`_blank`}
                       className="hover:underline"
                     >
                       Discord

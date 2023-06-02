@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { FaChrome, FaEdge } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { SiBrave } from "react-icons/si";
 export default function HeroSection() {
   return (
     <div className="bg-white">
@@ -11,7 +13,10 @@ export default function HeroSection() {
         <div className="mx-auto max-w-2xl py-8 sm:py-32 md:py-36 lg:py-44">
           <div className="text-center">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              <span className="text-4xl font-bold tracking-tight text-gray-900 sm:text-8xl">Showwand</span> <br />
+              <span className="text-4xl font-bold tracking-tight text-gray-900 sm:text-8xl">
+                Showwand
+              </span>{" "}
+              <br />
               Unleash Your Thread Wizardry
             </h1>
             <p className="mt-6 text-lg sm:text-xl md:text-2xl leading-8 text-gray-600">
@@ -34,6 +39,22 @@ export default function HeroSection() {
               >
                 Instruction <span aria-hidden="true">→</span>
               </Link>
+            </div>
+            <div className="mx-auto max-w-2xl py-5 sm:py-7 lg:py-10">
+              <div className="sm:mb-5 sm:flex sm:justify-center">
+                <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                  Available for all Chromium browsers{" "}
+                  <Link href="/docs">
+                  <FaChrome className="inline" />{" "}
+                  </Link>
+                  <Link href="/docs">
+                   <FaEdge className="inline" />{" "}
+                  </Link>
+                  <Link href="/docs">
+                  <SiBrave className="inline" />{" "}
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,11 +1,11 @@
 import {
   FaCode,
-  FaCss3,
-  FaFile,
-  FaFolder,
+  FaCss3Alt,
+  FaFileCode,
   FaHtml5,
   FaJsSquare,
 } from "react-icons/fa";
+import { HiCollection } from "react-icons/hi";
 async function getData() {
   const res = await fetch(
     "https://api.codetabs.com/v1/loc?github=nomandhoni-cs/Showwand&branch=production",
@@ -25,7 +25,7 @@ const CodeLanguageStats = async () => {
   return (
     <>
       <div className="text-center">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">
+        <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl mb-10">
         How was Showwand created?
         </h1>
       </div>
@@ -37,13 +37,13 @@ const CodeLanguageStats = async () => {
               IconComponent = FaJsSquare;
               break;
             case "CSS":
-              IconComponent = FaCss3;
+              IconComponent = FaCss3Alt;
               break;
             case "HTML":
               IconComponent = FaHtml5;
               break;
             default:
-              IconComponent = FaFile;
+              IconComponent = HiCollection;
               break;
           }
 
@@ -56,7 +56,7 @@ const CodeLanguageStats = async () => {
               <div className="flex justify-around items-center">
                 <div className="flex items-center after:content-[''] after:absolute after:w-[2px] after:h-6 after:bg-slate-300 after:right-[50%] after:bottom-[17%]">
                   <span className="mr-1">
-                    <FaFolder />
+                    <FaFileCode />
                   </span>
                   {item.files}
                 </div>
