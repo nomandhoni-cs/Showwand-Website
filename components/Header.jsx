@@ -1,7 +1,7 @@
 "use client";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import logo from "../../public/logo.png";
+import logo from "../public/logo.png";
 import {
   HiOutlineX,
   HiArrowNarrowRight,
@@ -118,13 +118,13 @@ const Header = () => {
                         />
                       </div>
                       <div className="flex-auto">
-                        <a
+                        <Link
                           href={item.href}
                           className="block font-semibold text-gray-900"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -132,7 +132,7 @@ const Header = () => {
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   {callsToAction.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 group hover:text-black hover:bg-gray-200"
@@ -142,7 +142,7 @@ const Header = () => {
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Panel>
@@ -156,13 +156,13 @@ const Header = () => {
             Features
           </Link>
           <Link
-            href="/"
+            href="/docs"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Docs
           </Link>
           <Link
-            href="#"
+            href="/about"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             About

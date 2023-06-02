@@ -1,11 +1,11 @@
 import {
   FaCode,
   FaCss3,
-  FaFile,
-  FaFolder,
+  FaFileCode,
   FaHtml5,
   FaJsSquare,
 } from "react-icons/fa";
+import { HiCollection } from "react-icons/hi";
 async function getData() {
   const res = await fetch(
     "https://api.codetabs.com/v1/loc?github=nomandhoni-cs/Showwand&branch=production",
@@ -43,7 +43,7 @@ const CodeLanguageStats = async () => {
               IconComponent = FaHtml5;
               break;
             default:
-              IconComponent = FaFile;
+              IconComponent = HiCollection;
               break;
           }
 
@@ -56,7 +56,7 @@ const CodeLanguageStats = async () => {
               <div className="flex justify-around items-center">
                 <div className="flex items-center after:content-[''] after:absolute after:w-[2px] after:h-6 after:bg-slate-300 after:right-[50%] after:bottom-[17%]">
                   <span className="mr-1">
-                    <FaFolder />
+                    <FaFileCode />
                   </span>
                   {item.files}
                 </div>
