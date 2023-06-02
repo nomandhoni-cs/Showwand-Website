@@ -18,7 +18,7 @@ const Contributors = async () => {
             Our Contributors
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Taxonomy is open source and powered by open source software.
+            These are the people who have contributed to the development of Showwand Browser Extension.
           </p>
           <div
             id="contributors-list"
