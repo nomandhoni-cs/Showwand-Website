@@ -1,6 +1,6 @@
 import {
   FaCode,
-  FaCss3,
+  FaCss3Alt,
   FaFileCode,
   FaHtml5,
   FaJsSquare,
@@ -37,7 +37,7 @@ const CodeLanguageStats = async () => {
               IconComponent = FaJsSquare;
               break;
             case "CSS":
-              IconComponent = FaCss3;
+              IconComponent = FaCss3Alt;
               break;
             case "HTML":
               IconComponent = FaHtml5;
