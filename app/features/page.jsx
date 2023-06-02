@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Features - Showwand",
   description: "Your Companion for Effortless Posting and Thread Management.",
@@ -55,7 +57,7 @@ const FeaturesPage = () => {
       <h2 className="text-lg font-bold tracking-tight text-gray-900 sm:text-2xl mb-4 text-center">
       Showwand Extension User Interface
         </h2>
-        <img src="https://project-assets.showwcase.com/57949/1685078156676-Showwand%2520(6).webp" alt="" className="w-full my-5" />
+        <Image src="https://project-assets.showwcase.com/57949/1685078156676-Showwand%2520(6).webp" alt="" width={1200} height={300} className="w-full my-5" />
       <h3 className="text-lg font-bold tracking-tight text-gray-900 sm:text-2xl mb-10 text-center">
         Here is what Showwand brings to the table:
       </h3>
@@ -63,7 +65,7 @@ const FeaturesPage = () => {
         {features.map((feature) => (
           <div key={feature.id} className="single-feature">
             <div className="feature-photo">
-              <img src={feature.image} alt="" className="w-full" />
+              <Image src={feature.image} alt={"Image of "+feature.title} width={400} height={100} className="w-full" />
             </div>
             <div className="feature-info">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl my-4">
