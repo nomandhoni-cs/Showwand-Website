@@ -24,10 +24,13 @@ const CodeLanguageStats = async () => {
   );
   return (
     <>
-      <div className="text-center">
-        <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl mb-10">
-        How was Showwand created?
+      <div className="text-center py-6 md:py-8 lg:py-20">
+        <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
+          How was Showwand created?
         </h1>
+        <p className="mt-6 text-lg leading-8 text-gray-600">
+          Languages and tools used to create Showwand.
+        </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center">
         {filteredData.map((item, index) => {
@@ -48,10 +51,18 @@ const CodeLanguageStats = async () => {
           }
 
           return (
-            <div key={index} className="relative group bg-white shadow-lg hover:shadow-2xl mb-9 sm:mb-7 py-9 px-12 sm:px-14 mx-4 rounded-md">
+            <div
+              key={index}
+              className="relative group bg-white shadow-lg hover:shadow-2xl mb-9 sm:mb-7 py-9 px-12 sm:px-14 mx-4 rounded-md"
+            >
               <div className="text-center mb-6">
-                <IconComponent size={50} className="inline mb-3  group-hover:scale-125 transition duration-300 ease-out hover:ease-in" />
-                <p className="text-3xl font-semibold text-black">{item.language}</p>
+                <IconComponent
+                  size={50}
+                  className="inline mb-3  group-hover:scale-125 transition duration-300 ease-out hover:ease-in"
+                />
+                <p className="text-3xl font-semibold text-black">
+                  {item.language}
+                </p>
               </div>
               <div className="flex justify-around items-center">
                 <div className="flex items-center after:content-[''] after:absolute after:w-[2px] after:h-6 after:bg-slate-300 after:right-[50%] after:bottom-[17%]">

@@ -9,7 +9,6 @@ const fromApi = async () => {
 };
 const Contributors = async () => {
   const data = await fromApi();
-  console.log(data);
   return (
     <>
       <section id="contributors" className="container py-8 md:py-12 lg:py-24">
