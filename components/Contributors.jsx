@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 const fromApi = async () => {
   const res = await fetch(
-    "https://api.github.com/repos/nomandhoni-cs/Showwand/contributors"
+    "https://api.github.com/repos/nomandhoni-cs/Showwand/contributors",{ next: { revalidate: 3600 },}
   );
   const data = await res.json();
   return data;
