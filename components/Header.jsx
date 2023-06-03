@@ -8,31 +8,24 @@ import {
   HiChevronDown,
   HiPlay,
   HiMenu,
-  HiChartPie,
-  HiCursorClick,
 } from "react-icons/hi";
 import { GoMarkGithub } from "react-icons/go";
 import { FaHandsHelping } from "react-icons/fa";
+import { FaChrome, FaEdge } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 const products = [
   {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: HiChartPie,
+    name: "In Chrome",
+    description: "How to install Showwand in Google Chrome",
+    href: "/docs",
+    icon: FaChrome,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: HiCursorClick,
-  },
-  {
-    name: "Automations",
-    description: "Build strategic funnels that will convert",
-    href: "#",
-    icon: HiArrowNarrowRight,
+    name: "In Edge",
+    description: "How to install Showwand in Microsoft Edge",
+    href: "/docs",
+    icon: FaEdge,
   },
 ];
 const callsToAction = [
@@ -88,7 +81,7 @@ const Header = () => {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              Product
+              How to install
               <HiChevronDown
                 className="h-5 w-5 flex-none text-gray-400"
                 aria-hidden="true"
@@ -219,7 +212,7 @@ const Header = () => {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Product
+                        How to install
                         <HiChevronDown
                           className={classNames(
                             open ? "rotate-180" : "",
@@ -250,16 +243,16 @@ const Header = () => {
                   Features
                 </Link>
                 <Link
-                  href="#"
+                  href="/docs"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
+                  Docs
                 </Link>
                 <Link
-                  href="#"
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Company
+                  About
                 </Link>
               </div>
               <div className="py-6">

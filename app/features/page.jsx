@@ -4,6 +4,7 @@ export const metadata = {
   title: "Features - Showwand",
   description: "Your Companion for Effortless Posting and Thread Management.",
   keywords: "Showwand, Showwcase, Twitter, Tweet, Thread, Post, Features",
+  
 };
 
 const features = [

@@ -2,14 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 const fromApi = async () => {
   const res = await fetch(
-    "https://api.github.com/repos/nomandhoni-cs/Showwand/contributors"
+    "https://api.github.com/repos/nomandhoni-cs/Showwand/contributors",{ next: { revalidate: 3600 },}
   );
   const data = await res.json();
   return data;
 };
 const Contributors = async () => {
   const data = await fromApi();
-  console.log(data);
   return (
     <>
       <section id="contributors" className="container py-8 md:py-12 lg:py-24">
@@ -18,7 +17,7 @@ const Contributors = async () => {
             Our Contributors
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Taxonomy is open source and powered by open source software.
+            These are the people who have contributed to the development of Showwand Browser Extension.
           </p>
           <div
             id="contributors-list"
