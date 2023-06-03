@@ -67,8 +67,8 @@ const AboutPage = () => {
           Discover Showwcase IDs from Twitter Profiles:
         </h3>
         <p className="mb-4">
-          Searching for a user's Showwcase ID on Twitter? Showwand simplifies
-          the process by displaying the Showwcase icon directly on a user's
+          Searching for a users Showwcase ID on Twitter? Showwand simplifies
+          the process by displaying the Showwcase icon directly on a users
           Twitter profile if they have a corresponding profile on Showwcase.com.
           Effortlessly explore new connections and discover exciting content on
           Showwand.

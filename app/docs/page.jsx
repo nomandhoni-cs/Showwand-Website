@@ -70,7 +70,7 @@ const DocsPage = () => {
               <div>
                 <p className="font-semibold">Load the Extension</p>
                 <p className="text-gray-500">
-                  Click on the "Load unpacked" button and select the folder
+                  Click on the Load unpacked button and select the folder
                   where you extracted the ZIP file contents.
                 </p>
               </div>
@@ -114,7 +114,7 @@ const DocsPage = () => {
                 <p className="text-gray-500">
                   Open Microsoft Edge and navigate to the Extensions page by
                   clicking on the menu icon (three dots) and selecting
-                  "Extensions".
+                  Extensions.
                 </p>
               </div>
             </li>
@@ -137,7 +137,7 @@ const DocsPage = () => {
               <div>
                 <p className="font-semibold">Load the Extension</p>
                 <p className="text-gray-500">
-                  Click on the "Load unpacked" button and select the downloaded
+                  Click on the Load unpacked button and select the downloaded
                   Showwand extension ZIP file. No need to extract the ZIP file
                   for Edge.
                 </p>

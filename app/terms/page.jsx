@@ -31,7 +31,7 @@ const TermsPage = () => {
       <h2 className="text-2xl font-bold mb-2">3. Intellectual Property</h2>
       <p className="mb-4">
         The Showwand extension and all associated intellectual property rights belong to the developers. You may not
-        reproduce, modify, or distribute the extension without explicit permission. Showwand is provided "as is," and the
+        reproduce, modify, or distribute the extension without explicit permission. Showwand is provided as is, and the
         developers make no warranties regarding its functionality or compatibility.
       </p>
 
