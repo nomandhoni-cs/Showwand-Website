@@ -44,14 +44,11 @@ export default function HeroSection() {
               <div className="sm:mb-5 sm:flex sm:justify-center">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   Available for all Chromium browsers{" "}
-                  <Link href="/docs" alt="Chrome">
+                  <Link href="/docs" className="tooltip" data-tip="hello" alt="Chrome">
                   <FaChrome className="inline" />{" "}
                   </Link>
-                  <Link href="/docs" alt="Edge">
+                  <Link href="/docs#edge" alt="Edge">
                    <FaEdge className="inline" />{" "}
-                  </Link>
-                  <Link href="/docs">
-                  <SiBrave className="inline" alt="Brave" />{" "}
                   </Link>
                 </div>
               </div>

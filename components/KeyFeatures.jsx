@@ -1,47 +1,61 @@
-import { FaChrome } from "react-icons/fa";
+import { IoCreate } from "react-icons/io5";
+import { MdSpaceDashboard, MdOutlineKey, MdAssistant } from "react-icons/md";
+import { LuTextCursorInput } from "react-icons/lu";
+import { CgProfile } from "react-icons/cg";
+
 const features = [
   {
-    name: "Push to deploy",
+    name: "Create Threads",
     description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    icon: FaChrome,
+      "Create threads with ease. Just click the button and you're good to go.",
+    icon: IoCreate,
   },
   {
-    name: "SSL certificates",
+    name: "Posts List",
     description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    icon: FaChrome,
+      "See your all recent posted threads in one place. You can also boost them from here.",
+    icon: MdSpaceDashboard,
   },
   {
-    name: "Simple queues",
+    name: "Store API keys securely",
     description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
-    icon: FaChrome,
+      "Store your Showwcase API keys in your local environment. No need to remember them anymore.",
+    icon: MdOutlineKey,
   },
   {
-    name: "Advanced security",
+    name: "Select it, Post it",
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
-    icon: FaChrome,
+      "Found anything worth sharing? Just select it and click the post button. It's that simple.",
+    icon: LuTextCursorInput,
+  },
+  {
+    name: "Showwcase ID Finder",
+    description:
+      "Find your Showwcase ID with ease. Just click the button and you're good to go.",
+    icon: CgProfile,
+  },
+  {
+    name: "Your Companion for Showwcase",
+    description:
+      "Showwand is your companion for effortless posting, thread management and so much more.",
+    icon: MdAssistant,
   },
 ];
 
 const KeyFeatures = () => {
   return (
     <>
-      <div className="bg-white py-24 sm:py-32">
+      <div className="bg-white py-24 sm:py-32 mb-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-indigo-600">
-              Deploy faster
+            <h2 className="text-base font-semibold leading-7 text-slate-950">
+              Key features
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Everything you need to deploy your app
+              All the features you need for better management
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
+              Here are some of the key features of Showwand Browser Extension.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -49,7 +63,7 @@ const KeyFeatures = () => {
               {features.map((feature) => (
                 <div key={feature.name} className="relative pl-16">
                   <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-950">
                       <feature.icon
                         className="h-6 w-6 text-white"
                         aria-hidden="true"
