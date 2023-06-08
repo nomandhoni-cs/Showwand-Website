@@ -47,7 +47,7 @@ const Footer = () => {
                 </h2>
                 <ul className="text-gray-800 font-medium">
                   <li className="mb-4">
-                    <Link href="https://showwand.vercel.com/" target={`_blank`} className="hover:underline">
+                    <Link href="/" target={`_blank`} className="hover:underline">
                       Showwand
                     </Link>
                   </li>
