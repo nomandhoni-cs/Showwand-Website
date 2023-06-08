@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { FaChrome, FaEdge } from "react-icons/fa";
-import { HiDownload } from "react-icons/hi";
-import { SiBrave } from "react-icons/si";
+import dynamic from "next/dynamic";
+const BrowserDetection = dynamic(() => import("./BrowserDetection"), {
+  ssr: false,
+});
+
 export default function HeroSection() {
   return (
     <div className="bg-white">
@@ -23,16 +26,8 @@ export default function HeroSection() {
               Your Companion for Effortless Posting and Thread Management
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link
-                href="https://github.com/nomandhoni-cs/Showwand/releases"
-                className="rounded-md bg-slate-950 px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
-                target="_blank"
-              >
-                Download
-                <span aria-hidden="true" className="inline-block ms-2">
-                  <HiDownload />
-                </span>
-              </Link>
+              {/* Detect the browser and Show the download button  */}
+              <BrowserDetection />
               <Link
                 href="/docs"
                 className="rounded-md px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-black shadow-sm hover:bg-slate-950 hover:text-white hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
@@ -44,11 +39,17 @@ export default function HeroSection() {
               <div className="sm:mb-5 sm:flex sm:justify-center">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   Available for all Chromium browsers{" "}
-                  <Link href="/docs" className="tooltip" data-tip="hello" alt="Chrome">
-                  <FaChrome className="inline" />{" "}
+                  <Link
+                    href="/docs"
+                    aria-label="Download for Chrome"
+                    alt="Chrome"
+                  >
+                    <FaChrome className="inline" />{" "}
                   </Link>
-                  <Link href="/docs#edge" alt="Edge">
-                   <FaEdge className="inline" />{" "}
+                  <Link href="/docs#edge" alt="Edge"
+                  aria-label="Download for Edge"
+                  >
+                    <FaEdge className="inline" />{" "}
                   </Link>
                 </div>
               </div>
