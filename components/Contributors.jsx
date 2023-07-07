@@ -7,6 +7,7 @@ const fromApi = async () => {
   const data = await res.json();
   return data;
 };
+import BMC from "../assets/images/bmc.webp"
 const Contributors = async () => {
   const data = await fromApi();
   return (
@@ -17,7 +18,8 @@ const Contributors = async () => {
             Our Contributors
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            These are the people who have contributed to the development of Showwand Browser Extension.
+            These are the people who have contributed to the development of
+            Showwand Browser Extension.
           </p>
           <div
             id="contributors-list"
@@ -39,6 +41,12 @@ const Contributors = async () => {
               );
             })}
           </div>
+          <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+            Support Our Development
+          </h2>
+          <a href="https://www.buymeacoffee.com/nomandhoni" target="_blank">
+            <Image src={BMC} alt="Buy me coffee for Noman Dhoni" width={200} height={50} />
+          </a>
         </div>
       </section>
     </>
