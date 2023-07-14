@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 const BrowserDetection = dynamic(() => import("./BrowserDetection"), {
   ssr: false,
 });
-import React from 'react'
 
 const HeroSection:React.FC = () => {
     return (
@@ -40,18 +39,16 @@ const HeroSection:React.FC = () => {
               <div className="sm:mb-5 sm:flex sm:justify-center">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   Available for all Chromium browsers{" "}
-                  <Link
-                    href="/docs"
-                    aria-label="Download for Chrome"
-                    alt="Chrome"
-                    >
-                    <FaChrome className="inline" />{" "}
-                  </Link>
-                  <Link href="/docs#edge" alt="Edge"
-                  aria-label="Download for Edge"
-                  >
-                    <FaEdge className="inline" />{" "}
-                  </Link>
+                    <Link href="/docs" passHref>
+                      <a aria-label="Download for Chrome" title="Chrome">
+                        <FaChrome className="inline" />{" "}
+                      </a>
+                    </Link>
+                    <Link href="/docs#edge" passHref>
+                      <a aria-label="Download for Edge" title="Edge">
+                        <FaEdge className="inline" />{" "}
+                      </a>
+                    </Link>
                 </div>
               </div>
             </div>
