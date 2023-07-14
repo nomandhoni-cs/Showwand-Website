@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { HiDownload } from 'react-icons/hi';
 import { useEffect, useState } from 'react';
 import { BsBrowserEdge } from "react-icons/bs";
-const BrowserDetection = () => {
+const BrowserDetection:React.FC = () => {
   const [isEdge, setIsEdge] = useState(false);
 
   useEffect(() => {

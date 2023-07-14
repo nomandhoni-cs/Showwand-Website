@@ -5,8 +5,8 @@ const BrowserDetection = dynamic(() => import("./BrowserDetection"), {
   ssr: false,
 });
 
-export default function HeroSection() {
-  return (
+const HeroSection:React.FC = () => {
+    return (
     <div className="bg-white">
       <div className="relative isolate px-6 lg:px-8">
         <div
@@ -31,7 +31,7 @@ export default function HeroSection() {
               <Link
                 href="/docs"
                 className="rounded-md px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-black shadow-sm hover:bg-slate-950 hover:text-white hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
-              >
+                >
                 Instruction <span aria-hidden="true">→</span>
               </Link>
             </div>
@@ -39,18 +39,16 @@ export default function HeroSection() {
               <div className="sm:mb-5 sm:flex sm:justify-center">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   Available for all Chromium browsers{" "}
-                  <Link
-                    href="/docs"
-                    aria-label="Download for Chrome"
-                    alt="Chrome"
-                  >
-                    <FaChrome className="inline" />{" "}
-                  </Link>
-                  <Link href="/docs#edge" alt="Edge"
-                  aria-label="Download for Edge"
-                  >
-                    <FaEdge className="inline" />{" "}
-                  </Link>
+                    <Link href="/docs" passHref>
+                      <a aria-label="Download for Chrome" title="Chrome">
+                        <FaChrome className="inline" />{" "}
+                      </a>
+                    </Link>
+                    <Link href="/docs#edge" passHref>
+                      <a aria-label="Download for Edge" title="Edge">
+                        <FaEdge className="inline" />{" "}
+                      </a>
+                    </Link>
                 </div>
               </div>
             </div>
@@ -60,3 +58,4 @@ export default function HeroSection() {
     </div>
   );
 }
+export default HeroSection

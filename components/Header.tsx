@@ -1,15 +1,14 @@
 "use client";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import logo from "../public/logo.png";
+import logo from "../public/next.svg";
 import {
   HiOutlineX,
-  HiArrowNarrowRight,
   HiChevronDown,
   HiPlay,
   HiMenu,
 } from "react-icons/hi";
-import { GoMarkGithub } from "react-icons/go";
+import { BsGithub } from "react-icons/bs";
 import { FaHandsHelping } from "react-icons/fa";
 import { FaChrome, FaEdge } from "react-icons/fa";
 import Link from "next/link";
@@ -41,11 +40,11 @@ const callsToAction = [
   },
 ];
 
-function classNames(...classes) {
+function classNames(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
-const Header = () => {
+const Header:React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="bg-white">
@@ -169,7 +168,7 @@ const Header = () => {
           >
             GitHub
             <span aria-hidden="true" className="inline-block mx-2">
-              <GoMarkGithub />
+              <BsGithub />
             </span>
           </Link>
         </div>
