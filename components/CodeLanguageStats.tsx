@@ -6,7 +6,17 @@ import {
   FaJsSquare,
 } from "react-icons/fa";
 import { HiCollection } from "react-icons/hi";
-async function getData() {
+
+interface LanguageData {
+  language: string;
+  files: number;
+  lines: number;
+  blanks: number;
+  comments: number;
+  linesOfCode: number;
+}
+
+async function getData(): Promise<LanguageData[]> {
   const res = await fetch(
     "https://api.codetabs.com/v1/loc?github=nomandhoni-cs/Showwand&branch=production",
     { next: { revalidate: 3600 } }
@@ -17,11 +27,19 @@ async function getData() {
 
   return res.json();
 }
-const CodeLanguageStats = async () => {
-  const data = await getData();
+
+const CodeLanguageStats: React.FC = async () => {
+  let data: LanguageData[] = [];
+  try {
+    data = await getData();
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+
   const filteredData = data.filter((item) =>
-    ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
+    ["JavaScript", "CSS", "HTML", "Total"].includes(item.language)
   );
+
   return (
     <>
       <div className="text-center py-6 md:py-8 lg:py-20">
@@ -34,7 +52,7 @@ const CodeLanguageStats = async () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center">
         {filteredData.map((item, index) => {
-          let IconComponent;
+          let IconComponent: React.ElementType;
           switch (item.language) {
             case "JavaScript":
               IconComponent = FaJsSquare;
