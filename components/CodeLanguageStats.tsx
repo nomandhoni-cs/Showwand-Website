@@ -6,7 +6,7 @@ import {
   FaJsSquare,
 } from "react-icons/fa";
 import { HiCollection } from "react-icons/hi";
-interface LanguageData {
+type LanguageData = {
   language: string;
   files: number;
   lines: number;
@@ -27,9 +27,9 @@ const getData = async () => {
   return res.json();
 }
 
-const CodeLanguageStats = async () => {
-  const data = await getData();
-  const filteredData = data.filter((item:LanguageData) =>
+const CodeLanguageStats: React.FC = async () => {
+  const data: LanguageData[] = await getData();
+  const filteredData: LanguageData[] = data.filter((item) =>
     ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
   );
   return (
@@ -43,7 +43,7 @@ const CodeLanguageStats = async () => {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center">
-        {filteredData.map((item:LanguageData, index:number) => {
+        {filteredData.map((item, index) => {
           let IconComponent;
           switch (item.language) {
             case "JavaScript":
