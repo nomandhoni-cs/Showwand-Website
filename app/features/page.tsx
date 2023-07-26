@@ -4,10 +4,16 @@ export const metadata = {
   title: "Features - Showwand",
   description: "Your Companion for Effortless Posting and Thread Management.",
   keywords: "Showwand, Showwcase, Twitter, Tweet, Thread, Post, Features",
-  
-};
 
-const features = [
+};
+interface Feature {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
+
+const features: Feature[] = [
   {
     id: 1,
     title: "Seamlessly Post Threads from Anywhere: ",
@@ -49,16 +55,16 @@ const features = [
       "https://project-assets.showwcase.com/57949/1685089546461-Add%2520a%2520heading.webp",
   },
 ];
-const FeaturesPage = () => {
+const FeaturesPage: React.FC = () => {
   return (
     <div className="container mx-auto">
       <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
         Features
       </h1>
       <h2 className="text-lg font-bold tracking-tight text-gray-900 sm:text-2xl mb-4 text-center">
-      Showwand Extension User Interface
-        </h2>
-        <Image src="https://project-assets.showwcase.com/57949/1685078156676-Showwand%2520(6).webp" alt="" width={1200} height={300} className="w-full my-5" />
+        Showwand Extension User Interface
+      </h2>
+      <Image src="https://project-assets.showwcase.com/57949/1685078156676-Showwand%2520(6).webp" alt="" width={1200} height={300} className="w-full my-5" />
       <h3 className="text-lg font-bold tracking-tight text-gray-900 sm:text-2xl mb-10 text-center">
         Here is what Showwand brings to the table:
       </h3>
@@ -66,7 +72,7 @@ const FeaturesPage = () => {
         {features.map((feature) => (
           <div key={feature.id} className="single-feature">
             <div className="feature-photo">
-              <Image src={feature.image} alt={"Image of "+feature.title} width={400} height={100} className="w-full" />
+              <Image src={feature.image} alt={"Image of " + feature.title} width={400} height={100} className="w-full" />
             </div>
             <div className="feature-info">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl my-4">
