@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
-import logo from "../public/next.svg";
+import logo from "../assets/images/logo.svg";
 const socialLinks = [
   {
     name: "Facebook",

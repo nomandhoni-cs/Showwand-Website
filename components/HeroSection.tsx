@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaChrome, FaEdge } from "react-icons/fa";
+import { SiBrave } from "react-icons/si";
 import dynamic from "next/dynamic";
 const BrowserDetection = dynamic(() => import("./BrowserDetection"), {
   ssr: false,
@@ -40,14 +41,13 @@ const HeroSection:React.FC = () => {
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                   Available for all Chromium browsers{" "}
                     <Link href="/docs" passHref>
-                      <a aria-label="Download for Chrome" title="Chrome">
                         <FaChrome className="inline" />{" "}
-                      </a>
                     </Link>
                     <Link href="/docs#edge" passHref>
-                      <a aria-label="Download for Edge" title="Edge">
                         <FaEdge className="inline" />{" "}
-                      </a>
+                    </Link>
+                    <Link href="/docs" passHref>
+                      <SiBrave className="inline" />{" "}
                     </Link>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 "use client";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import logo from "../public/next.svg";
+import logo from "../assets/images/logo.svg";
 import {
   HiOutlineX,
   HiChevronDown,
