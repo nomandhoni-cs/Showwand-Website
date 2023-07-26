@@ -15,7 +15,7 @@ interface LanguageData {
   linesOfCode: number;
 }
 
-async function getData() {
+const getData = async () => {
   const res = await fetch(
     "https://api.codetabs.com/v1/loc?github=nomandhoni-cs/Showwand&branch=production",
     { next: { revalidate: 3600 } }
@@ -29,7 +29,7 @@ async function getData() {
 
 const CodeLanguageStats = async () => {
   const data = await getData();
-  const filteredData: LanguageData[] = data.filter((item: LanguageData) =>
+  const filteredData = data.filter((item:LanguageData) =>
     ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
   );
   return (
@@ -43,7 +43,7 @@ const CodeLanguageStats = async () => {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 text-center">
-        {filteredData.map((item, index) => {
+        {filteredData.map((item:LanguageData, index:number) => {
           let IconComponent;
           switch (item.language) {
             case "JavaScript":
