@@ -10,7 +10,6 @@ const BrowserDetection: React.FC = () => {
     const detectEdge = async () => {
       if (typeof window !== 'undefined' && window.navigator && window.navigator.userAgent) {
         const userAgent = window.navigator.userAgent;
-        console.log(userAgent);
         if (userAgent.includes('Edg') || userAgent.includes('Edge')) {
           setIsEdge(true);
         }

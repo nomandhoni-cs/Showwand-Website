@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { FaGithub } from "react-icons/fa"
 
-const ComingSoon = () => {
+const ComingSoon:React.FC = () => {
   return (
     <>
       <section id="comming-soon" className="container py-8 md:py-12 lg:py-24">

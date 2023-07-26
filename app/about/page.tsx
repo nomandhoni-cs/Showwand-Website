@@ -5,7 +5,7 @@ export const metadata = {
   keywords:
     "Showwand, Showwcase, Showwand Browser Extension, Showwand Extension, Showwand Chrome Extension, Showwand Firefox Extension, Showwand Edge Extension, Showwand Safari Extension, Showwand Opera Extension, Showwand Extension Download, Showwand Extension Installation, Showwand Extension Guide, Showwand Extension Documentation, Showwand Extension Features, Showwand Extension",
 };
-const AboutPage = () => {
+const AboutPage:React.FC = () => {
   return (
     <>
       <div className="container mx-auto py-8">

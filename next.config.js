@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    loader: "default",
+    domains: [
+      "avatars.githubusercontent.com",
+      "project-assets.showwcase.com",
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
