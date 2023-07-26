@@ -3,6 +3,7 @@ import PromoVideo from "@/components/PromoVideo";
 import HeroSection from "@/components/HeroSection";
 // import Contributors from "@/components/Contributors";
 import KeyFeatures from "@/components/KeyFeatures";
+import CodeLanguageStats from "@/components/CodeLanguageStats";
 
 const Home:React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Home:React.FC = () => {
   <HeroSection />
   <PromoVideo />
   <KeyFeatures />
+  <CodeLanguageStats />
   <OpenSource />
   {/* 
   <Contributors /> */}
