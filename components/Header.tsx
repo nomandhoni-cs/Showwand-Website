@@ -11,6 +11,7 @@ import {
 import { BsGithub } from "react-icons/bs";
 import { FaHandsHelping } from "react-icons/fa";
 import { FaChrome, FaEdge } from "react-icons/fa";
+import { SiBrave } from "react-icons/si";
 import Link from "next/link";
 import Image from "next/image";
 const products = [
@@ -25,6 +26,12 @@ const products = [
     description: "How to install Showwand in Microsoft Edge",
     href: "/docs",
     icon: FaEdge,
+  },
+  {
+    name: "In Brave",
+    description: "How to install Showwand in Brave Browser",
+    href: "/docs",
+    icon: SiBrave,
   },
 ];
 const callsToAction = [
