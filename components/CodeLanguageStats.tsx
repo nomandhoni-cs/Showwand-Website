@@ -26,9 +26,10 @@ async function getData() {
 
   return res.json();
 }
+
 const CodeLanguageStats = async () => {
-  const data: LanguageData[] = await getData();
-  const filteredData: LanguageData[] = data.filter((item) =>
+  const data = await getData();
+  const filteredData: LanguageData[] = data.filter((item: LanguageData) =>
     ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
   );
   return (
