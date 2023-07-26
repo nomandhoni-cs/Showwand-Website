@@ -33,6 +33,7 @@ const CodeLanguageStats: React.FC = async () => {
     ["HTML", "CSS", "JavaScript", "Total"].includes(item.language)
   );
   return (
+    <></>) }
     <>
       <div className="text-center py-6 md:py-8 lg:py-20">
         <h1 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">
