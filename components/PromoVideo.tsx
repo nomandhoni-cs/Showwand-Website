@@ -1,17 +1,9 @@
-import React from "react";
-
-const PromoVideo = () => {
+const PromoVideo: React.FC = () => {
   const videoId = "jDIs7GivgGc";
 
   return (
     <div className="lg:flex lg:flex-row items-center lg:mb-14">
       <div className="iframe-promo lg:h-96 w-full lg:w-full lg:px-10 px-0 mb-3 lg:mb-0">
-        {/* <iframe
-          className="w-full lg:h-full sm:h-96 h-56 rounded-lg shadow-lg"
-          src={`https://www.youtube.com/embed/${videoId}`}
-          title="Promo Video"
-          allowFullScreen
-        ></iframe> */}
         <iframe
           className="w-full aspect-video rounded-lg shadow-lg"
           src={`https://www.youtube.com/embed/${videoId}&autoplay=1`}

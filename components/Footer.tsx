@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
-import logo from "../public/logo.png";
+import logo from "../assets/images/logo.svg";
 const socialLinks = [
   {
     name: "Facebook",
@@ -19,7 +19,7 @@ const socialLinks = [
     icon: FaGithub,
   },
 ];
-const Footer = () => {
+const Footer:React.FC = () => {
   return (
     <>
       <footer className="bg-white white:bg-gray-900">

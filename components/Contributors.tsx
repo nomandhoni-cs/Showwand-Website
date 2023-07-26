@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+interface ContributorData {
+  id: number;
+  html_url: string;
+  avatar_url: string;
+}
 const fromApi = async () => {
   const res = await fetch(
-    "https://api.github.com/repos/nomandhoni-cs/Showwand/contributors",{ next: { revalidate: 3600 },}
+    "https://api.github.com/repos/nomandhoni-cs/Showwand/contributors", { next: { revalidate: 3600 }, }
   );
-  const data = await res.json();
+  const data: ContributorData[] = await res.json();
   return data;
 };
 import BMC from "../assets/images/bmc.webp"
@@ -25,7 +30,7 @@ const Contributors = async () => {
             id="contributors-list"
             className="flex flex-wrap justify-center gap-4"
           >
-            {data.map((contributor) => {
+            {data.map((contributor: ContributorData) => {
               return (
                 <div key={contributor.id}>
                   <Link href={contributor.html_url} target={`_blank`}>

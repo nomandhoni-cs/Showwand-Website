@@ -42,7 +42,7 @@ const features = [
   },
 ];
 
-const KeyFeatures = () => {
+const KeyFeatures:React.FC = () => {
   return (
     <>
       <div className="bg-white py-24 sm:py-32 mb-10">

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsBrowserChrome, BsBrowserEdge } from "react-icons/bs";
 import { FaCheckCircle, FaChrome, FaEdge } from "react-icons/fa";
+import { SiBrave } from "react-icons/si";
 
 export const metadata = {
   title: "Documentation - Showwand",
@@ -9,7 +10,11 @@ export const metadata = {
     "Documentation for Showwand, a browser extension that helps you manage your Showwcase threads and posts and many more.",
   keywords: "Showwand, Showwand Documentation, Showwand Guide, Showwand Docs",
 };
-const stepsForEdge = [
+interface Step {
+  title: string;
+  description: string;
+}
+const stepsForEdge: Step[] = [
   {
     title: "Download the Extension",
     description:
@@ -27,7 +32,7 @@ const stepsForEdge = [
   },
 ];
 
-const stepsForChrome = [
+const stepsForChrome: Step[] = [
   {
     title: "Download the Extension",
     description:
@@ -59,7 +64,7 @@ const stepsForChrome = [
       "The Showwand extension is now installed in Chrome. You can start using it to enhance your Showwcase experience.",
   },
 ];
-const DocsPage = () => {
+const DocsPage: React.FC = () => {
   return (
     <>
       <div className="container mx-auto py-8">
@@ -69,17 +74,17 @@ const DocsPage = () => {
             Chrome <FaChrome className="inline" />
           </h1>
           <div className="chrome-download-link my-10">
-          <Link
-              href="https://github.com/nomandhoni-cs/Showwand/releases"
+            <Link
+              href="https://chrome.google.com/webstore/detail/showwand/eccblhhmiljocdidkkcaidegfdoophga"
               className="rounded-md bg-slate-950 px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
               target={`_blank`}
-              >
-              Download Showwand for Chrome from Github
+            >
+              Download for Chrome ( Support all Chromium browsers <SiBrave className="inline" />{" "})
               <span aria-hidden="true" className="inline-block ms-2">
                 <BsBrowserChrome />
               </span>
             </Link>
-              </div>
+          </div>
           <ul className="space-y-4 list-none pl-0">
             {stepsForChrome.map((step, index) => (
               <li className="flex items-start space-x-4" key={index}>
@@ -111,7 +116,7 @@ const DocsPage = () => {
               className="rounded-md bg-slate-950 px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-black hover:border-solid border-2 border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600"
               target={`_blank`}
             >
-              Add Showwand to Edge
+              Download for Edge
               <span aria-hidden="true" className="inline-block ms-2">
                 <BsBrowserEdge />
               </span>

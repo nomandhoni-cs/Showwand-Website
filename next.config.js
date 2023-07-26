@@ -5,7 +5,6 @@ const nextConfig = {
     domains: [
       "avatars.githubusercontent.com",
       "project-assets.showwcase.com",
-      // Add other domains if needed
     ],
   },
 };
